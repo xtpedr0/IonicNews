@@ -18,7 +18,7 @@ Aqui estão algumas telas do aplicativo:
 
 | Tela Inicial | Detalhes da Notícia | Favoritos |
 | :---: | :---: | :---: |
-| ![Home](./screenshots/home.png) | ![Detalhes](./screenshots/details.png) | ![Favoritos](./screenshots/favorites.png) |
+| <img src="https://raw.githubusercontent.com/xtpedr0/IonicNews/main/screenshots/home.png" width="200"> | <img src="https://raw.githubusercontent.com/xtpedr0/IonicNews/main/screenshots/details.png" width="200"> | <img src="https://raw.githubusercontent.com/xtpedr0/IonicNews/main/screenshots/favorites.png" width="200"> |
 
 *(Nota: Imagens ilustrativas para demonstração da interface)*
 
