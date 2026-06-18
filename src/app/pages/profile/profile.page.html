@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div *ngIf="user" class="profile-container">
+    <ion-avatar class="profile-avatar">
+      <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+
+    <h1>{{ user.name || user.email }}</h1>
+    <p class="user-email">{{ user.email }}</p>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Informações da Conta</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Status:</strong> Ativo</p>
+        <p><strong>Notificações:</strong> Ativadas</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button expand="block" color="danger" (click)="logout()">
+      <ion-icon name="log-out-outline" slot="start"></ion-icon>
+      Sair
+    </ion-button>
+  </div>
+
+  <div *ngIf="!user" class="ion-text-center ion-padding">
+    <p>Você não está autenticado. Faça login para continuar.</p>
+    <ion-button routerLink="/login" expand="block">
+      Fazer Login
+    </ion-button>
+  </div>
+</ion-content>

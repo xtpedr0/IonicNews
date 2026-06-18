@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="register-container">
+    <h1 class="ion-text-center">Criar Conta</h1>
+    <p class="ion-text-center subtitle">Junte-se ao IonicNews</p>
+
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+      <ion-item>
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input 
+          type="text" 
+          formControlName="name"
+          placeholder="Seu nome">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input 
+          type="email" 
+          formControlName="email"
+          placeholder="seu@email.com">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input 
+          type="password" 
+          formControlName="password"
+          placeholder="Mínimo 6 caracteres">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Confirmar Senha</ion-label>
+        <ion-input 
+          type="password" 
+          formControlName="confirmPassword"
+          placeholder="Confirme sua senha">
+        </ion-input>
+      </ion-item>
+
+      <ion-button expand="block" type="submit" [disabled]="!registerForm.valid">
+        Cadastrar
+      </ion-button>
+    </form>
+
+    <div class="ion-text-center ion-margin-top">
+      <p>Já tem conta? 
+        <ion-button fill="clear" routerLink="/login">
+          Faça login
+        </ion-button>
+      </p>
+    </div>
+  </div>
+</ion-content>

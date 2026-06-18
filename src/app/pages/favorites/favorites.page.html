@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Favoritos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngIf="favorites.length > 0">
+    <ion-item *ngFor="let article of favorites" (click)="openDetails(article)" button>
+      <ion-thumbnail slot="start">
+        <img [src]="article.urlToImage || 'assets/images/placeholder.png'" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2 class="ion-text-wrap">{{ article.title }}</h2>
+        <p class="ion-text-wrap">{{ article.description }}</p>
+      </ion-label>
+      <ion-button fill="clear" slot="end" (click)="removeFavorite(article.url, $event)">
+        <ion-icon name="close-circle"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="favorites.length === 0" class="ion-padding ion-text-center">
+    <ion-icon name="heart-outline" style="font-size: 64px; color: #ccc;"></ion-icon>
+    <p>Nenhum favorito salvo ainda</p>
+  </div>
+</ion-content>
