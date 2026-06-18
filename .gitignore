@@ -1,0 +1,22 @@
+# node_modules
+node_modules/
+
+# Ionic/Angular build output
+www/
+dist/
+.angular/
+
+# Capacitor
+android/
+ios/
+
+# Environment
+src/environments/environment.prod.ts
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

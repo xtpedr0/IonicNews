@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Notícia</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleFavorite()">
+        <ion-icon [name]="isFavorite ? 'heart' : 'heart-outline'"></ion-icon>
+      </ion-button>
+      <ion-button (click)="share()">
+        <ion-icon name="share-social-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" *ngIf="article">
+  <img [src]="article.urlToImage || 'assets/images/placeholder.png'" class="main-img" />
+  
+  <div class="meta-info">
+    <ion-badge color="secondary">{{ article.source.name }}</ion-badge>
+    <ion-note slot="end">{{ article.publishedAt | date:'dd/MM/yyyy HH:mm' }}</ion-note>
+  </div>
+
+  <h1>{{ article.title }}</h1>
+  
+  <p class="author" *ngIf="article.author">Por: {{ article.author }}</p>
+
+  <div class="content">
+    <p>{{ article.description }}</p>
+    <p>{{ article.content }}</p>
+  </div>
+
+  <ion-button expand="block" [href]="article.url" target="_blank" class="ion-margin-top">
+    Ler notícia completa no site
+  </ion-button>
+</ion-content>

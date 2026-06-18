@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>IonicNews</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/profile">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-segment (ionChange)="segmentChanged($event)" value="general" scrollable>
+      <ion-segment-button value="general">Geral</ion-segment-button>
+      <ion-segment-button value="technology">Tech</ion-segment-button>
+      <ion-segment-button value="sports">Esportes</ion-segment-button>
+      <ion-segment-button value="business">Negócios</ion-segment-button>
+      <ion-segment-button value="entertainment">Lazer</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list *ngIf="articles.length > 0">
+    <ion-item *ngFor="let article of articles" (click)="openDetails(article)" button>
+      <ion-thumbnail slot="start">
+        <img [src]="article.urlToImage || 'assets/images/placeholder.png'" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2 class="ion-text-wrap">{{ article.title }}</h2>
+        <p class="ion-text-wrap">{{ article.description }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="articles.length === 0" class="ion-padding ion-text-center">
+    <ion-spinner name="crescent"></ion-spinner>
+    <p>Carregando notícias...</p>
+  </div>
+</ion-content>

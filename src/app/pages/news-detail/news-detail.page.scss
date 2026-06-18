@@ -1,0 +1,35 @@
+.main-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.meta-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.author {
+  font-style: italic;
+  color: var(--ion-color-medium);
+  margin-bottom: 16px;
+}
+
+.content {
+  line-height: 1.6;
+  color: var(--ion-color-dark);
+  
+  p {
+    margin-bottom: 12px;
+  }
+}
