@@ -1,57 +1,34 @@
 # IonicNews 📰
 
-App de Notícias Personalizadas desenvolvido com **Ionic Framework** e **Angular**. O projeto consome a [NewsAPI](https://newsapi.org/) para exibir notícias em tempo real, permitindo filtragem por categorias, salvamento de favoritos e suporte offline via cache.
+Aplicativo de notícias simples desenvolvido com Ionic e Angular para a Atividade Final Complementar.
 
-## 🚀 Funcionalidades
+## 🚀 O que o app faz:
 
-- **Autenticação**: Sistema de login e cadastro (Simulado via LocalStorage/AuthService).
-- **Integração NewsAPI**: Busca de notícias globais e nacionais em tempo real.
-- **Categorias**: Filtros para Tecnologia, Esportes, Negócios, Entretenimento e Geral.
-- **Favoritos**: Salve notícias para ler depois, mesmo offline.
-- **Cache Local**: Armazenamento de notícias visualizadas para economia de dados e performance.
-- **Push Notifications**: Suporte estruturado via Capacitor Push Notifications.
-- **Interface Responsiva**: Design adaptável para Mobile e Web usando componentes Ionic.
+- **Entrar e Cadastrar**: Sistema simples para acessar o aplicativo.
+- **Notícias em Tempo Real**: Mostra as últimas notícias usando uma API.
+- **Categorias**: Você pode filtrar notícias por temas como Tecnologia, Esportes e Negócios.
+- **Favoritos**: Opção para salvar as notícias que você mais gostou.
+- **Funciona Offline**: As notícias ficam guardadas no celular para você ver depois mesmo sem internet.
+- **Avisos (Notificações)**: Já vem preparado para receber avisos de novas notícias.
 
-## 📸 Screenshots
-
-Aqui estão algumas telas do aplicativo:
+## 📸 Fotos do Aplicativo:
 
 | Tela Inicial | Detalhes da Notícia | Favoritos |
 | :---: | :---: | :---: |
 | <img src="https://raw.githubusercontent.com/xtpedr0/IonicNews/main/screenshots/home.png" width="200"> | <img src="https://raw.githubusercontent.com/xtpedr0/IonicNews/main/screenshots/details.png" width="200"> | <img src="https://raw.githubusercontent.com/xtpedr0/IonicNews/main/screenshots/favorites.png" width="200"> |
 
-*(Nota: Imagens ilustrativas para demonstração da interface)*
+## 🛠️ Tecnologias:
 
-## 🛠️ Tecnologias Utilizadas
+- Ionic 7 e Angular
+- NewsAPI (para as notícias)
+- Armazenamento local (para o cache e favoritos)
 
-- **Ionic 7** + **Angular 17**
-- **TypeScript**
-- **Capacitor** (para funcionalidades nativas)
-- **NewsAPI** (Consumo de REST API)
-- **LocalStorage** (Persistência de dados e Cache)
+## 🔧 Como usar:
 
-## 🔧 Como Executar
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/usuario/IonicNews.git
-   ```
-2. Instale as dependências:
-   ```bash
-   npm install
-   ```
-3. Configure sua chave da NewsAPI em `src/environments/environment.ts`:
-   ```typescript
-   newsApiKey: 'SUA_CHAVE_AQUI'
-   ```
-4. Inicie o servidor de desenvolvimento:
-   ```bash
-   ionic serve
-   ```
-
-## 📄 Licença
-
-Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
+1. Baixe o código.
+2. Digite `npm install` no terminal para instalar tudo.
+3. Coloque sua chave da API no arquivo de configurações.
+4. Digite `ionic serve` para abrir o app no navegador.
 
 ---
-Projeto desenvolvido como Atividade Final Complementar.
+Projeto feito para a Atividade Final Complementar.
